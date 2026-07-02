@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
+
+<article class="post wrap-narrow" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header">
+    <p class="post-breadcrumb">
+      <a href="{{ '/blog/' | relative_url }}">~/blog</a>
+      {% if page.categories.first %}/ <a href="{{ '/categories/' | relative_url }}#{{ page.categories.first | slugify }}">{{ page.categories.first }}</a>{% endif %}
+    </p>
+    <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
+    {% if page.description %}<p class="post-desc">{{ page.description }}</p>{% endif %}
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+      <span aria-hidden="true">·</span>
+      {% assign words = content | strip_html | number_of_words %}
+      <span>{{ words | divided_by: 200 | at_least: 1 }} min read</span>
+      {% if page.difficulty %}<span aria-hidden="true">·</span><span class="difficulty difficulty-{{ page.difficulty | downcase }}">{{ page.difficulty }}</span>{% endif %}
+    </div>
+    {% if page.tags.size > 0 %}
+    <ul class="tag-list">
+      {% for tag in page.tags %}
+      <li><a class="tag" href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">#{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </header>
+
+  <div class="post-layout">
+    <aside class="toc-wrap" aria-label="Table of contents">
+      <nav id="toc" class="toc"></nav>
+    </aside>
+    <div class="post-content" id="post-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+  </div>
+
+  <footer class="post-footer">
+    {% include share.html %}
+    <nav class="post-nav" aria-label="Post navigation">
+      {% if page.previous %}
+      <a class="post-nav-item prev" href="{{ page.previous.url | relative_url }}">
+        <span class="post-nav-label">← older</span>
+        <span class="post-nav-title">{{ page.previous.title }}</span>
+      </a>
+      {% endif %}
+      {% if page.next %}
+      <a class="post-nav-item next" href="{{ page.next.url | relative_url }}">
+        <span class="post-nav-label">newer →</span>
+        <span class="post-nav-title">{{ page.next.title }}</span>
+      </a>
+      {% endif %}
+    </nav>
+  </footer>
+</article>

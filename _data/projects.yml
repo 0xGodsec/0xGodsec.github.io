@@ -1,0 +1,24 @@
+# Your portfolio projects. Each entry becomes a card on /projects/.
+- name: ADRecon-Toolkit
+  description: >-
+    PowerShell toolkit for rapid Active Directory enumeration and
+    misconfiguration discovery during internal assessments. (PLACEHOLDER)
+  tech: [PowerShell, Active Directory, LDAP]
+  repo: https://github.com/godsec/adrecon-toolkit
+  status: active
+
+- name: SubHunter
+  description: >-
+    Fast asynchronous subdomain enumeration and takeover detection tool
+    for bug bounty reconnaissance. (PLACEHOLDER)
+  tech: [Python, asyncio, DNS]
+  repo: https://github.com/godsec/subhunter
+  status: active
+
+- name: MalDoc-Analyzer
+  description: >-
+    Static triage pipeline for malicious Office documents — macro extraction,
+    IOC parsing, and YARA classification. (PLACEHOLDER)
+  tech: [Python, YARA, oletools]
+  repo: https://github.com/godsec/maldoc-analyzer
+  status: archived

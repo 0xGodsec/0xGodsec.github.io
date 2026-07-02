@@ -1,0 +1,13 @@
+# Experience timeline shown on /about/. Replace with your own.
+- role: Security Analyst (PLACEHOLDER)
+  org: Example Corp
+  period: "2024 — Present"
+  points:
+    - Performed web application and network penetration tests.
+    - Built detection rules and automated triage tooling.
+- role: SOC Intern (PLACEHOLDER)
+  org: Example SOC
+  period: "2023 — 2024"
+  points:
+    - Monitored SIEM alerts and investigated incidents.
+    - Authored threat intelligence briefs.

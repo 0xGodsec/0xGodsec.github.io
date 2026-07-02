@@ -1,0 +1,32 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+description: Browse all posts by tag.
+---
+<div class="wrap-narrow">
+  <header class="page-header">
+    <h1 class="page-title"><span class="brand-prompt">~$</span> grep -r tags</h1>
+  </header>
+
+  {% assign sorted_tags = site.tags | sort %}
+  <ul class="tag-cloud">
+    {% for tag in sorted_tags %}
+    <li><a class="tag" href="#{{ tag[0] | slugify }}">#{{ tag[0] }}<span class="count">{{ tag[1] | size }}</span></a></li>
+    {% endfor %}
+  </ul>
+
+  {% for tag in sorted_tags %}
+  <section class="archive-group" id="{{ tag[0] | slugify }}">
+    <h2>{{ tag[0] }}</h2>
+    <ul class="archive-list">
+      {% for post in tag[1] %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>

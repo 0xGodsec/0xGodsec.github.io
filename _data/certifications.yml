@@ -1,0 +1,13 @@
+# Certifications shown on /about/. Replace with your own.
+- name: "OSCP — Offensive Security Certified Professional"
+  issuer: OffSec
+  year: "20XX"
+  url: ""
+- name: "eJPT — Junior Penetration Tester"
+  issuer: INE Security
+  year: "20XX"
+  url: ""
+- name: "CRTP — Certified Red Team Professional"
+  issuer: Altered Security
+  year: "20XX"
+  url: ""

@@ -1,0 +1,49 @@
+/* Rouge syntax highlighting — terminal palette, themable via data-theme */
+
+:root, html[data-theme="dark"] {
+  --syn-text: #c9d4e3;
+  --syn-comment: #5c6b80;
+  --syn-keyword: #ff7ab2;
+  --syn-string: #a8e07e;
+  --syn-number: #ffb454;
+  --syn-func: #4dd0e1;
+  --syn-const: #d2a6ff;
+  --syn-var: #c9d4e3;
+  --syn-error: #ff5c77;
+  --syn-prompt: #00e68a;
+}
+html[data-theme="light"] {
+  --syn-text: #2a3648;
+  --syn-comment: #8494ab;
+  --syn-keyword: #b0257a;
+  --syn-string: #2f7d33;
+  --syn-number: #b06000;
+  --syn-func: #0f7c8c;
+  --syn-const: #6f42c1;
+  --syn-var: #2a3648;
+  --syn-error: #cc2f4a;
+  --syn-prompt: #00875a;
+}
+
+.highlight {
+  color: var(--syn-text);
+
+  .c, .cm, .c1, .cs, .cd { color: var(--syn-comment); font-style: italic; } // comments
+  .k, .kd, .kn, .kp, .kr, .kv, .ow { color: var(--syn-keyword); }           // keywords
+  .kt, .kc { color: var(--syn-const); }                                     // types/constants
+  .s, .sb, .sc, .sd, .s2, .s1, .sh, .sx, .sr { color: var(--syn-string); }  // strings
+  .si, .se { color: var(--syn-number); }                                    // interpolation/escape
+  .m, .mf, .mh, .mi, .il, .mo, .mb, .mx { color: var(--syn-number); }       // numbers
+  .na, .nf, .fm, .nx { color: var(--syn-func); }                            // attrs/functions
+  .nb, .bp { color: var(--syn-const); }                                     // builtins
+  .nc, .nn, .no { color: var(--syn-const); }                                // class/namespace
+  .nt { color: var(--syn-keyword); }                                        // html tags
+  .nv, .vc, .vg, .vi { color: var(--syn-var); }                             // variables
+  .o { color: var(--syn-text); }                                            // operators
+  .gp { color: var(--syn-prompt); user-select: none; }                      // shell prompt
+  .gi { color: var(--syn-string); }                                         // diff insert
+  .gd { color: var(--syn-error); }                                          // diff delete
+  .err { color: var(--syn-error); }
+  .gh, .gu { color: var(--syn-func); font-weight: 700; }
+  .w { color: inherit; }
+}

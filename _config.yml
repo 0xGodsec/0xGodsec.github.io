@@ -1,0 +1,80 @@
+# ------------------------------------------------------------------
+# Site settings — edit these first
+# ------------------------------------------------------------------
+title: Godsec
+tagline: Offensive Security · Research · Writeups
+description: >-
+  Cybersecurity blog and portfolio of Godsec — web application pentesting,
+  Active Directory security, red teaming, bug bounty, OSINT, malware analysis,
+  and hands-on CTF / Hack The Box writeups.
+url: "https://godsec.github.io"   # CHANGE to https://<your-username>.github.io
+baseurl: ""                        # keep empty for a root user site
+lang: en
+timezone: UTC
+
+author:
+  name: Godsec
+  email: nithishgurukumar@gmail.com
+  bio: >-
+    Security researcher focused on offensive security, adversary tradecraft,
+    and practical, reproducible writeups.
+
+# Social handles (footer + share links). Leave blank ("") to hide.
+social_links:
+  github: godsec          # CHANGE: your GitHub username
+  twitter: godsec         # CHANGE or ""
+  linkedin: godsec        # CHANGE or ""
+  hackthebox: ""
+  tryhackme: ""
+  rss: true
+
+# Used by jekyll-seo-tag
+twitter:
+  username: godsec
+  card: summary_large_image
+social:
+  name: Godsec
+  links:
+    - https://github.com/godsec
+
+# ------------------------------------------------------------------
+# Build settings — rarely needs editing
+# ------------------------------------------------------------------
+permalink: /blog/:title/
+paginate: 8
+paginate_path: "/blog/page:num/"
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+feed:
+  posts_limit: 20
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .gitignore

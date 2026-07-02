@@ -1,0 +1,9 @@
+# Skill groups shown on /about/.
+- group: Offensive
+  items: [Web App Pentesting, Active Directory, Red Teaming, API Security, Cloud Security]
+- group: Analysis
+  items: [Malware Analysis, Threat Intelligence, OSINT, Network Security]
+- group: Tooling
+  items: [Burp Suite, Nmap, BloodHound, Metasploit, Ghidra, Wireshark]
+- group: Dev & Automation
+  items: [Python, Bash, PowerShell, C, Git, Docker]

@@ -1,0 +1,33 @@
+---
+title: "Your Post Title Here"
+description: "One-sentence summary shown in listings, search, and SEO/social cards."
+date: 2026-07-02 09:00:00 +0000
+categories: [Web App Pentesting]     # ONE primary category
+tags: [web, recon, burp-suite]        # multiple tags, lowercase, hyphenated
+difficulty: Medium                    # Easy | Medium | Hard | Insane (optional)
+# image: /assets/img/my-post-cover.png  # optional custom social/OG image
+---
+
+Intro paragraph. What is this post about and why should the reader care?
+
+## First section
+
+Prose, then code:
+
+```bash
+nmap -sCV target.example
+```
+
+> Callout / note / disclaimer block.
+
+## Second section
+
+More content. Tables render nicely:
+
+| Thing | Value |
+|---|---|
+| A | 1 |
+
+## Takeaways
+
+Wrap up with the transferable lessons.

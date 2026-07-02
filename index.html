@@ -1,0 +1,56 @@
+---
+layout: default
+title: Home
+description: Cybersecurity blog & portfolio — offensive security research, writeups, and practical guides by Godsec.
+---
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="hero-kicker">// offensive security · research · writeups</p>
+      <h1>I break things, <span class="accent">document how</span>, and help you learn.</h1>
+      <p class="hero-lede">{{ site.author.bio }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ '/blog/' | relative_url }}">read the blog →</a>
+        <a class="btn btn-ghost" href="{{ '/about/' | relative_url }}">whoami</a>
+      </div>
+    </div>
+    <div class="term" aria-hidden="true">
+      <div class="term-bar"><i></i><i></i><i></i><span>godsec@lab: ~</span></div>
+      <div class="term-body">
+        <div><span class="p">~$</span> <span class="cmd">whoami</span></div>
+        <div class="out">godsec — security researcher</div>
+        <div><span class="p">~$</span> <span class="cmd">cat ./focus.txt</span></div>
+        <div class="out">web · ad · red team · osint · malware</div>
+        <div><span class="p">~$</span> <span class="cmd">ls ~/blog | wc -l</span></div>
+        <div class="out">{{ site.posts | size }} writeups and counting</div>
+        <div><span class="p">~$</span> <span class="cmd">./start.sh</span><span class="cursor" style="color:var(--accent)">▊</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="section-head">
+    <h2>latest posts</h2>
+    <a class="more" href="{{ '/blog/' | relative_url }}">all posts →</a>
+  </div>
+  <div class="grid grid-3">
+    {% for post in site.posts limit: 6 %}
+      {% include post-card.html post=post %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="section-head"><h2>topics</h2></div>
+  <div class="grid grid-3">
+    {% assign topics = "Web App Pentesting|Attacking OWASP Top 10, auth flaws, and real-world web bugs.;;Active Directory|Kerberos abuse, lateral movement, and domain dominance.;;Red Teaming|Adversary emulation, C2, and evasion tradecraft.;;Bug Bounty|Recon workflows and high-impact vulnerability hunting.;;Malware Analysis|Static & dynamic triage, unpacking, and IOCs.;;OSINT & Threat Intel|Recon, attribution, and intelligence tradecraft." | split: ";;" %}
+    {% for t in topics %}
+      {% assign parts = t | split: "|" %}
+      <a class="topic-card" href="{{ '/tags/' | relative_url }}">
+        <h3>{{ parts[0] }}</h3>
+        <p>{{ parts[1] }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</section>

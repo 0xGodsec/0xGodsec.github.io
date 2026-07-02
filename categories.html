@@ -1,0 +1,32 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+description: Browse all posts by category.
+---
+<div class="wrap-narrow">
+  <header class="page-header">
+    <h1 class="page-title"><span class="brand-prompt">~$</span> tree ./categories</h1>
+  </header>
+
+  {% assign sorted_cats = site.categories | sort %}
+  <ul class="tag-cloud">
+    {% for cat in sorted_cats %}
+    <li><a class="tag" href="#{{ cat[0] | slugify }}">{{ cat[0] }}<span class="count">{{ cat[1] | size }}</span></a></li>
+    {% endfor %}
+  </ul>
+
+  {% for cat in sorted_cats %}
+  <section class="archive-group" id="{{ cat[0] | slugify }}">
+    <h2>{{ cat[0] }}</h2>
+    <ul class="archive-list">
+      {% for post in cat[1] %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>

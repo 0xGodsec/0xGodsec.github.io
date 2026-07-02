@@ -1,0 +1,15 @@
+<article class="post-card">
+  <div class="post-card-meta">
+    <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%Y-%m-%d" }}</time>
+    {% if include.post.categories.first %}<span class="post-card-cat">{{ include.post.categories.first }}</span>{% endif %}
+  </div>
+  <h3 class="post-card-title"><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h3>
+  <p class="post-card-excerpt">{{ include.post.description | default: include.post.excerpt | strip_html | truncate: 150 }}</p>
+  {% if include.post.tags.size > 0 %}
+  <ul class="tag-list">
+    {% for tag in include.post.tags limit: 4 %}
+    <li><a class="tag" href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">#{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</article>
