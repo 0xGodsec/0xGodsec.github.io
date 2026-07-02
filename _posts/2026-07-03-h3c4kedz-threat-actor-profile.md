@@ -1,7 +1,7 @@
 ---
 title: "OSINT Report: Threat Actor Profile — H3C4KEDZ"
 description: "A focused OSINT analysis of H3C4KEDZ, a Cambodia-linked hacktivist group targeting Thai infrastructure."
-date: 2026-07-03 09:00:00 +0000
+date: 2026-07-02 09:00:00 +0000
 categories: [OSINT]
 tags: [osint, threat-intel, hacktivism, cambodia, thailand]
 difficulty: Medium
