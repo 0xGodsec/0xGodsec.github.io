@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby "3.3.0"
+
 # Mirrors the exact gem set GitHub Pages runs in production.
 gem "github-pages", group: :jekyll_plugins
 
