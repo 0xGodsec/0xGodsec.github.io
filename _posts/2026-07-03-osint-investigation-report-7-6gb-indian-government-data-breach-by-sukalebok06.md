@@ -1,6 +1,6 @@
 ---
 title: 'OSINT Investigation Report: 7.6GB Indian Government Data Breach by SukaLebok06'
-description: '## Case Details'
+description: "OSINT investigation into the 7.6GB Indian government data breach claimed by threat actor SukaLebok06 on DarkForums — scope, impact, infrastructure, and attribution."
 date: 2026-07-03 03:00:00 +0000
 categories: [OSINT]
 tags: [osint, threat-intel]
@@ -105,7 +105,7 @@ From Instagram and link directories:
 - **PentryzaAI (Worm GPT Lite version)**: IDR 500K
 - **OSINT & Doxing Services**: IDR 600K
 
-![SukaLebok06_2(1).png](SukaLebok06_2(1).png)
+![SukaLebok06_2](/assets/img/osint/SukaLebok06_2-1.png)
 
 ## **Telegram Activities**
 
@@ -146,4 +146,3 @@ The core purpose of this report is not solely to attribute with absolute certain
 
 This report is intended to provide actionable insights, inform defensive strategies, and support further investigation, whether by cybersecurity professionals or relevant law enforcement agencies.
 
-[OSINT Threat Actor Profile – SukaLebok06 (Follow-Up Investigation)](https://app.notion.com/p/OSINT-Threat-Actor-Profile-SukaLebok06-Follow-Up-Investigation-2372941b704e80f08479f408bbeae6da?pvs=21)

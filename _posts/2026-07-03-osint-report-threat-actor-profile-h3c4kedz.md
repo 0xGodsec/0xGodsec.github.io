@@ -1,6 +1,6 @@
 ---
 title: 'OSINT Report: Threat Actor Profile - H3C4KEDZ'
-description: '# Executive Summary'
+description: "OSINT profile of H3C4KEDZ, a Cambodia-based hacktivist group targeting Thai infrastructure under #OpThailand — TTPs, affiliations, and infrastructure analysis."
 date: 2026-07-03 01:00:00 +0000
 categories: [OSINT]
 tags: [osint, threat-intel]
@@ -51,18 +51,18 @@ H3C4KEDZ, also referenced as "We_H3c4kedz1" in Telegram data, is a Cambodian hac
     
     - @h3c4kedzsec (1 follower).
     
-    ![image.png](image%201.png)
+    ![image](/assets/img/osint/image-1.png)
     
     - @hecknood (bio: "WE ARE H3C4KEDZ," 7 followers).
     
-    ![image.png](image%202.png)
+    ![image](/assets/img/osint/image-2.png)
     
     - These accounts reinforce the group’s Anonymous Cambodia affiliation and focus on Thai targets.
 - **Telegram**: The "We_H3c4kedz1" channel shows a history of bans, with a new channel established after the old one was banned on July 5, 2025 (message_id: 3). Recent posts include operational updates and a mention of a TikTok ban on August 13, 2025 (message_id: 673).
 
-![image.png](image%203.png)
+![image](/assets/img/osint/image-3.png)
 
-![image.png](image%204.png)
+![image](/assets/img/osint/image-4.png)
 
 - **GitHub**: github.com/H3c4kedz hosts repositories with DDoS tools (Ddos, DDOSV1, GhostDDOSV2), dirsearch (directory enumeration), and SQL-INJECTION scripts, indicating technical capabilities.
     
@@ -87,7 +87,7 @@ H3C4KEDZ employs a range of cyber tactics, as evidenced by both stealth mole too
     - **Details**: Multiple photo posts (e.g., photo_2025-08-12_23-55-54.jpg) suggest continued activity, possibly documenting new attacks or proofs. A post on August 12, 2025 (message_id: 670) states "Start...!", indicating an ongoing or planned operation.
     - **Additional Evidence**: The stealth mole tool links H3C4KEDZ to awgateasean.doae.go.th (July 11, 2025), a Thai agricultural site, suggesting additional targeting of governmental systems.
     
-    ![image.png](image%205.png)
+    ![image](/assets/img/osint/image-5.png)
     
 - **Platform Bans**:
     - **Date**: August 13, 2025 (message_id: 673).
@@ -96,10 +96,10 @@ H3C4KEDZ employs a range of cyber tactics, as evidenced by both stealth mole too
 - **Historical Context**:
     - Stealth mole data connects H3C4KEDZ to prior attacks on Thai police sites (e.g., wp-login.php exploits) and leaks (e.g., bd.0510), with media timestamps (e.g., 2025-01-17 20:54.35) showing long-term engagement.
     
-    ![image.png](image%206.png)
+    ![image](/assets/img/osint/image-6.png)
     
 
-![image.png](image%207.png)
+![image](/assets/img/osint/image-7.png)
 
 ## **Attack Methods & Techniques**
 

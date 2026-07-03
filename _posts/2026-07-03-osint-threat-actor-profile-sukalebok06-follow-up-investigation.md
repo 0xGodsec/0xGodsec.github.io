@@ -1,6 +1,6 @@
 ---
 title: 'OSINT Threat Actor Profile – SukaLebok06 (Follow-Up Investigation)'
-description: '### 📌 Overview'
+description: "Follow-up OSINT profile of SukaLebok06 of the Sunda Cyber collective — digital footprint, PentryzaAI links, identity traces, and threat assessment via StealthMole."
 date: 2026-07-03 02:00:00 +0000
 categories: [OSINT]
 tags: [osint, threat-intel]
@@ -21,7 +21,7 @@ After publishing the initial report, cybersecurity professional **Vishal** comme
 
 That prompted a deeper dive into the **PentryzaAI ecosystem**, specifically targeting user activity, development aliases, and digital cross-linking. I discovered that a **LinkedIn profile**—seemingly contributing to PentryzaAI—was using a handle that matched previous activity by **SukaLebok06**.
 
-![Untitled design (1).png](Untitled_design_(1).png)
+![Untitled design 1](/assets/img/osint/Untitled_design_1.png)
 
 Pivoting from this LinkedIn username led to additional trails across **Hugging Face**, **Scribd**, and other publicly indexed sites.
 
@@ -38,11 +38,11 @@ From the LinkedIn handle, I pivoted into public search engines and cross-referen
 - **Age**: Approx. 16–17 years (Based on grade-level documents and school enrollment)
 - **Academic Background**: Enrolled in XI RPL (Software & Game Development) at **SMK BPP Bandung**
 
-![Untitled design (3).png](Untitled_design_(3).png)
+![Untitled design 3](/assets/img/osint/Untitled_design_3.png)
 
 🔎 Using the real name and documents indexed on Scribd, I found a PPT project titled **"Laporan Hasil Penjualan Kue Lebaran (Cake Sales Report for Lebaran)"** published under the alias `SukaLebok06`, suggesting direct name-to-handle linkage.
 
-![Untitled design (2).png](Untitled_design_(2).png)
+![Untitled design 2](/assets/img/osint/Untitled_design_2.png)
 
 ### 📱 **Instagram & Public Digital Artifacts**
 
