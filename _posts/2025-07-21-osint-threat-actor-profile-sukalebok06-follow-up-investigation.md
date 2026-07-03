@@ -1,7 +1,7 @@
 ---
 title: 'OSINT Threat Actor Profile – SukaLebok06 (Follow-Up Investigation)'
 description: "Follow-up OSINT profile of SukaLebok06 of the Sunda Cyber collective — digital footprint, PentryzaAI links, identity traces, and threat assessment via StealthMole."
-date: 2026-07-03 02:00:00 +0000
+date: 2025-07-21 09:00:00 +0000
 categories: [OSINT]
 tags: [osint, threat-intel]
 difficulty: Medium

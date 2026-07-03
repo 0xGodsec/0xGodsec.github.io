@@ -1,7 +1,7 @@
 ---
 title: "OSINT Report: Threat Actor Profile - NRSTSEC"
 description: "OSINT profile of NRSTSEC, a hacktivist group behind DDoS attacks, defacements, and data leaks against Thai targets from 2023-2025, tracked via Telegram and Zone-XSEC."
-date: 2026-07-03 05:00:00 +0000
+date: 2025-08-14 07:00:00 +0000
 categories: [OSINT]
 tags: [osint, threat-intel, hacktivism]
 difficulty: Medium

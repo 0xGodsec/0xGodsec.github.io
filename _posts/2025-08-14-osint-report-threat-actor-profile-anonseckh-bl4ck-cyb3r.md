@@ -1,7 +1,7 @@
 ---
 title: "OSINT Report: Threat Actor Profile - AnonSecKH / BL4CK CYB3R"
 description: "OSINT profile of AnonSecKH (aka BL4CK CYB3R / ANON-KH), a politically motivated Cambodian hacktivist group targeting Thai government, military, and financial sectors under #OpThailand2025."
-date: 2026-07-03 07:00:00 +0000
+date: 2025-08-14 11:00:00 +0000
 categories: [OSINT]
 tags: [osint, threat-intel, hacktivism]
 difficulty: Medium

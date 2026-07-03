@@ -1,7 +1,7 @@
 ---
 title: "OSINT Report: Threat Actor Profile - NXBBSEC"
 description: "OSINT profile of NXBBSEC, a Telegram/X-based hacktivist collective running DDoS attacks, data leaks, and system exploitation against Thai and Cambodian targets."
-date: 2026-07-03 04:00:00 +0000
+date: 2025-08-14 08:00:00 +0000
 categories: [OSINT]
 tags: [osint, threat-intel, hacktivism]
 difficulty: Medium

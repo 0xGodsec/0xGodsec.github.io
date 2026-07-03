@@ -1,7 +1,7 @@
 ---
 title: "OSINT Report: Threat Actor Profile - KOLzSec Cyber Activities"
 description: "OSINT profile of KOLzSec, a hacktivist group defacing and DDoSing Thai government sites, linked to NXBBSEC, AnonSecKH, and allied Southeast Asian collectives."
-date: 2026-07-03 06:00:00 +0000
+date: 2025-08-14 09:00:00 +0000
 categories: [OSINT]
 tags: [osint, threat-intel, hacktivism]
 difficulty: Medium

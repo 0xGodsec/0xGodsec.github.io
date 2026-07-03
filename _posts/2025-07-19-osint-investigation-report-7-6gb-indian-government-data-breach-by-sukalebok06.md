@@ -1,7 +1,7 @@
 ---
 title: 'OSINT Investigation Report: 7.6GB Indian Government Data Breach by SukaLebok06'
 description: "OSINT investigation into the 7.6GB Indian government data breach claimed by threat actor SukaLebok06 on DarkForums — scope, impact, infrastructure, and attribution."
-date: 2026-07-03 03:00:00 +0000
+date: 2025-07-19 09:00:00 +0000
 categories: [OSINT]
 tags: [osint, threat-intel]
 difficulty: Medium

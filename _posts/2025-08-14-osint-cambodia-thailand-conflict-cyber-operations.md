@@ -1,7 +1,7 @@
 ---
 title: "OSINT Investigation: Cyber Operations in the Cambodia–Thailand Conflict (Focused on Cambodian Threat Actors)"
 description: "OSINT investigation into the cyber dimension of the 2025 Cambodia–Thailand border conflict — Cambodian hacktivist operations, mass data breaches, and cyber-physical hybrid-warfare tactics across the dispute."
-date: 2026-07-03 08:00:00 +0000
+date: 2025-08-14 12:00:00 +0000
 categories: [OSINT]
 tags: [osint, threat-intel, hacktivism, cambodia, thailand]
 difficulty: Hard
