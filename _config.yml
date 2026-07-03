@@ -7,7 +7,7 @@ description: >-
   Cybersecurity blog and portfolio of Godsec — web application pentesting,
   Active Directory security, red teaming, bug bounty, OSINT, malware analysis,
   and hands-on CTF / Hack The Box writeups.
-url: "https://0xGodsec.github.io"
+url: "https://godsec.is-a.dev"
 baseurl: ""                        # keep empty for a root user site
 lang: en
 timezone: UTC
