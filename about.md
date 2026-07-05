@@ -10,14 +10,21 @@ description: Who is Godsec — background, skills, certifications, and experienc
 
 ## whoami
 
-> _Replace this section with your own story._ (PLACEHOLDER)
+I'm **Nithish Guru Kumar Gajula** — an **Offensive Security Consultant** based in Pune, India,
+writing here under the handle **Godsec**. I have 3+ years of experience in penetration testing,
+vulnerability exploitation, and red team operations across enterprise environments, currently
+as a Senior Security Consultant at **BDO India**.
 
-I'm **Godsec**, a security researcher focused on **offensive security** — web application
-pentesting, Active Directory attacks, red teaming, and hands-on writeups. I use this site
-to document what I learn, share reproducible research, and help others break into the field.
+My day job is hands-on security testing of web applications, APIs, network infrastructure, and
+mobile platforms — using Burp Suite, Metasploit, Nessus, Nmap, OWASP ZAP, and Frida to find,
+exploit, and validate real weaknesses across thousands of servers and network devices. I came
+up through the **SOC** side first (triaging 100+ daily alerts across five SIEM platforms and
+mapping adversary behavior with MITRE ATT&CK), which shapes how I think about offense: I know
+what the defenders are watching, so I know where the blind spots are.
 
-I care about **practical, reproducible** security content: no hand-waving, working commands,
-and clear explanations of *why* an attack works, not just *that* it does.
+I'm **CEH Practical** and **Microsoft SC-200** certified, with **OSCP in progress**. This site
+is where I document what I learn — practical, reproducible research with working commands and
+clear explanations of *why* an attack works, not just *that* it does.
 
 ### what I write about
 
@@ -27,8 +34,10 @@ OSINT, malware analysis, network & API security, cloud security, and CTF / Hack 
 ### get in touch
 
 - **Email:** [{{ site.author.email }}](mailto:{{ site.author.email }})
-{% if site.social_links.github != "" %}- **GitHub:** [@{{ site.social_links.github }}](https://github.com/{{ site.social_links.github }}){% endif %}
-{% if site.social_links.linkedin != "" %}- **LinkedIn:** [/in/{{ site.social_links.linkedin }}](https://www.linkedin.com/in/{{ site.social_links.linkedin }}){% endif %}
+- **LinkedIn:** [/in/nithish-guru](https://www.linkedin.com/in/nithish-guru)
+- **GitHub:** [@POXOZ](https://github.com/POXOZ)
+- **TryHackMe:** [NithisX](https://tryhackme.com/p/NithisX) — Top 2% globally
+- **Credly:** [verified certifications](https://www.credly.com/users/nithish-guru-kumar-gajula)
 
 ## experience
 
@@ -38,37 +47,4 @@ OSINT, malware analysis, network & API security, cloud security, and CTF / Hack 
     <div><span class="xp-role">{{ job.role }}</span> · {{ job.org }}</div>
     <div class="xp-meta">{{ job.period }}</div>
     <ul>
-    {% for p in job.points %}<li>{{ p }}</li>{% endfor %}
-    </ul>
-  </li>
-{% endfor %}
-</ul>
-
-</div>
-
-<aside markdown="1">
-
-### skills
-
-{% for g in site.data.skills %}
-<div class="skill-group">
-  <h3>{{ g.group }}</h3>
-  <ul class="tag-list">
-    {% for s in g.items %}<li class="tag">{{ s }}</li>{% endfor %}
-  </ul>
-</div>
-{% endfor %}
-
-### certifications
-
-<ul class="cert-list">
-{% for c in site.data.certifications %}
-  <li>
-    <div class="cert-name">{% if c.url != "" %}<a href="{{ c.url }}">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</div>
-    <div class="cert-meta">{{ c.issuer }} · {{ c.year }}</div>
-  </li>
-{% endfor %}
-</ul>
-
-</aside>
-</div>
+    {% for p in job.points %}<li>{{ p }}</l
