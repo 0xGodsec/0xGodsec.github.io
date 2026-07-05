@@ -26,7 +26,7 @@ social_links:
   linkedin: nithish-guru
   hackthebox: ""
   tryhackme: ""
-  rss: true
+  rss: false
 
 # Used by jekyll-seo-tag
 twitter:
@@ -57,13 +57,9 @@ sass:
   style: compressed
 
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
-
-feed:
-  posts_limit: 20
 
 defaults:
   - scope:

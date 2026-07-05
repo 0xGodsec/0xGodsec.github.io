@@ -19,7 +19,6 @@
         {% if s.linkedin and s.linkedin != "" %}<li><a href="https://www.linkedin.com/in/{{ s.linkedin }}" rel="me noopener" target="_blank">linkedin</a></li>{% endif %}
         {% if s.hackthebox and s.hackthebox != "" %}<li><a href="{{ s.hackthebox }}" rel="me noopener" target="_blank">hackthebox</a></li>{% endif %}
         {% if s.tryhackme and s.tryhackme != "" %}<li><a href="{{ s.tryhackme }}" rel="me noopener" target="_blank">tryhackme</a></li>{% endif %}
-        {% if s.rss %}<li><a href="{{ '/feed.xml' | relative_url }}">rss</a></li>{% endif %}
       </ul>
     </div>
     <p class="footer-copy">© {{ 'now' | date: '%Y' }} {{ site.author.name }} · built with Jekyll · hosted on GitHub Pages</p>

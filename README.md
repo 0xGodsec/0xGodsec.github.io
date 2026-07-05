@@ -85,7 +85,7 @@ categories, and the sitemap all update on their own.
 - **Copy buttons** on every code block, plus a copy-permalink button.
 - **Social sharing** — X, LinkedIn, Reddit, Hacker News.
 - **SEO** — `jekyll-seo-tag` (meta + Open Graph + Twitter cards + JSON-LD),
-  `jekyll-sitemap`, `robots.txt`, and RSS via `jekyll-feed`.
+  `jekyll-sitemap`, and `robots.txt`.
 - **Responsive**, accessible (skip link, ARIA, keyboard nav), and fast (system fonts +
   one small JS file, no framework).
 
