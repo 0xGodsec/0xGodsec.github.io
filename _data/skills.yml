@@ -1,9 +1,11 @@
 # Skill groups shown on /about/.
 - group: Offensive
-  items: [Web App Pentesting, Active Directory, Red Teaming, API Security, Cloud Security]
-- group: Analysis
-  items: [Malware Analysis, Threat Intelligence, OSINT, Network Security]
+  items: [Penetration Testing, Web & API Security, Mobile App Security, Network & Infra Testing, Red Teaming, Exploitation]
 - group: Tooling
-  items: [Burp Suite, Nmap, BloodHound, Metasploit, Ghidra, Wireshark]
+  items: [Burp Suite Pro, Metasploit, Nmap, OWASP ZAP, Frida, SQLMap, Nikto, Wireshark, Nessus, Qualys VMDR]
+- group: Detection & Analysis
+  items: [MITRE ATT&CK, Threat Hunting, OSINT, IOC Analysis, Splunk, Azure Sentinel, Elastic SIEM]
 - group: Dev & Automation
-  items: [Python, Bash, PowerShell, C, Git, Docker]
+  items: [Python, PowerShell, Bash, C, JavaScript, KQL, Git, Docker]
+- group: Platforms & Cloud
+  items: [Linux (Kali/Ubuntu/RHEL), Windows Server, Active Directory, AWS, Azure]

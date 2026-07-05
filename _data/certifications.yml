@@ -1,13 +1,29 @@
-# Certifications shown on /about/. Replace with your own.
+# Certifications shown on /about/.
 - name: "OSCP — Offensive Security Certified Professional"
   issuer: OffSec
-  year: "20XX"
+  year: "In Progress · 2026"
   url: ""
-- name: "eJPT — Junior Penetration Tester"
-  issuer: INE Security
-  year: "20XX"
+- name: "CEH v11 & CEH Practical"
+  issuer: EC-Council
+  year: ""
   url: ""
-- name: "CRTP — Certified Red Team Professional"
-  issuer: Altered Security
-  year: "20XX"
+- name: "CAP — Certified AppSec Practitioner"
+  issuer: The SecOps Group
+  year: ""
+  url: ""
+- name: "CNSP — Certified Network Security Practitioner"
+  issuer: The SecOps Group
+  year: ""
+  url: ""
+- name: "SC-200 — Security Operations Analyst"
+  issuer: Microsoft
+  year: ""
+  url: ""
+- name: "Qualys VMDR"
+  issuer: Qualys
+  year: ""
+  url: ""
+- name: "Fortinet NSE 1 & NSE 2"
+  issuer: Fortinet
+  year: ""
   url: ""

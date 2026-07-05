@@ -1,13 +1,19 @@
-# Experience timeline shown on /about/. Replace with your own.
-- role: Security Analyst (PLACEHOLDER)
-  org: Example Corp
-  period: "2024 — Present"
+# Experience timeline shown on /about/.
+- role: Senior Security Consultant
+  org: BDO India Services Pvt. Ltd.
+  period: "Sep 2024 — Present · Pune, India"
   points:
-    - Performed web application and network penetration tests.
-    - Built detection rules and automated triage tooling.
-- role: SOC Intern (PLACEHOLDER)
-  org: Example SOC
-  period: "2023 — 2024"
+    - Perform technical security testing of web apps, APIs, network infrastructure, and mobile platforms with Burp Suite, Nessus, Nmap, OWASP ZAP, and Frida across 4,000+ servers and 2,500+ network devices.
+    - Support red team and phishing-simulation exercises assessing organizational resilience, detection coverage, and user-awareness readiness.
+    - Conduct assessments and configuration reviews across enterprise banking environments, triaging vulnerabilities by exploitability, severity, and business impact.
+    - Build custom Nessus audit policies to automate configuration-compliance checks against hardening standards.
+    - Produce risk-rated reports translating exploitation findings into prioritized remediation guidance for technical and executive stakeholders.
+
+- role: SOC Analyst (L1)
+  org: Soffit Infrastructure Services (Airtel)
+  period: "May 2023 — Jul 2024 · Gurugram, India"
   points:
-    - Monitored SIEM alerts and investigated incidents.
-    - Authored threat intelligence briefs.
+    - Triaged 100+ daily alerts across five SIEM platforms (Splunk, Azure Sentinel, Elastic, Seceon aiSIEM, RSA NetWitness), mapping adversary TTPs with MITRE ATT&CK.
+    - Investigated malware, phishing, and unauthorized-access attempts, developing deep insight into detection blind spots and evasion patterns.
+    - Tuned detection rules based on observed attacker techniques, cutting false positives by 20% and contributing to a 15% reduction in MTTD.
+    - Documented incidents end-to-end — attack timelines, IOCs, affected systems, and containment recommendations.
