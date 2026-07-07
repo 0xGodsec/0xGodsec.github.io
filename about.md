@@ -47,4 +47,50 @@ OSINT, malware analysis, network & API security, cloud security, and CTF / Hack 
     <div><span class="xp-role">{{ job.role }}</span> · {{ job.org }}</div>
     <div class="xp-meta">{{ job.period }}</div>
     <ul>
-    {% for p in job.points %}<li>{{ p }}</l
+    {% for p in job.points %}<li>{{ p }}</li>{% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>
+
+## achievements
+
+- 🥇 **1st Place** — StealthMole OSINT Capture The Flag (CTF) Competition, 2025
+- 🏆 **Employee of the Quarter** — 3 consecutive quarters at BDO India (Q3–Q4 2024, Q1 2025)
+- 📈 **Top 2% globally** on TryHackMe (profile: NithisX)
+
+## education
+
+**B.Tech, Computer Science and Engineering** — Parul University, Vadodara · Aug 2019 – Apr 2023
+
+Relevant coursework: Cryptography & Network Security, Network Security Protocols, Information
+Security, Operating Systems, Distributed Systems, and Web Application Programming.
+
+</div>
+
+<aside markdown="1">
+
+### skills
+
+{% for g in site.data.skills %}
+<div class="skill-group">
+  <h3>{{ g.group }}</h3>
+  <ul class="tag-list">
+    {% for s in g.items %}<li class="tag">{{ s }}</li>{% endfor %}
+  </ul>
+</div>
+{% endfor %}
+
+### certifications
+
+<ul class="cert-list">
+{% for c in site.data.certifications %}
+  <li>
+    <div class="cert-name">{% if c.url != "" %}<a href="{{ c.url }}">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</div>
+    <div class="cert-meta">{{ c.issuer }}{% if c.year != "" %} · {{ c.year }}{% endif %}</div>
+  </li>
+{% endfor %}
+</ul>
+
+</aside>
+</div>
