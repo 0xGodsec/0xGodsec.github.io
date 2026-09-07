@@ -7,7 +7,7 @@ description: >-
   Cybersecurity blog and portfolio of Godsec — web application pentesting,
   Active Directory security, red teaming, bug bounty, OSINT, malware analysis,
   and hands-on CTF / Hack The Box writeups.
-url: "https://godsec.pages.dev"
+url: "https://godsec.is-a.dev"
 baseurl: ""                        # keep empty for a root user site
 lang: en
 timezone: UTC
@@ -20,21 +20,22 @@ author:
 
 # Social handles (footer + share links). Leave blank ("") to hide.
 social_links:
-  github: godsec          # CHANGE: your GitHub username
-  twitter: godsec         # CHANGE or ""
+  github: POXOZ           # GitHub username
+  twitter: ""             # no X/Twitter — set to your handle to show the link
   linkedin: nithish-guru
   hackthebox: ""
-  tryhackme: ""
+  tryhackme: "https://tryhackme.com/p/NithisX"
   rss: false
 
 # Used by jekyll-seo-tag
 twitter:
-  username: godsec
+  username: ""
   card: summary_large_image
 social:
   name: Godsec
   links:
-    - https://github.com/godsec
+    - https://github.com/POXOZ
+    - https://www.linkedin.com/in/nithish-guru
 
 # ------------------------------------------------------------------
 # Build settings — rarely needs editing
