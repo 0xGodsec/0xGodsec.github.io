@@ -2,9 +2,9 @@
 title: "Checkpoint (HackTheBox) — Walkthrough: AD Recycle Bin → BadSuccessor → Memory Forensics → Domain Admin"
 description: "HackTheBox Checkpoint walkthrough — an assumed-breach Windows Server 2025 AD chain: restore a deleted account via the AD Recycle Bin, a malicious .vsix deploy pipeline, BadSuccessor (dMSA) abuse, then a leaked VM memory snapshot that hands over the Administrator hash."
 date: 2026-09-17 09:00:00 +0000
-categories: [Active Directory]
+categories: [CTF]
 tags: [active-directory, hackthebox, windows, badsuccessor, dmsa, acl-abuse, ad-recycle-bin, memory-forensics, volatility, secretsdump, pass-the-hash, dcsync]
-difficulty: Hard
+difficulty: Insane
 image: /assets/img/checkpoint/checkpoint-07-pth-dcsync-root.png
 ---
 
