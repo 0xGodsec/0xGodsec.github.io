@@ -113,7 +113,7 @@ The investigation into Boss Ranzen was conducted using a combination of open-sou
 - **Details**:
     - The Facebook URL directed to the "Jakarta Blackhat" group, where posts by "Renzaskyi" contained URLs of compromised domains and mirror links to hacking archives.
         
-        ![Boss Ranzen-8.2.png](/assets/img/osint/boss-ranzen/Boss_Ranzen-8.2%201.png)
+        ![Boss Ranzen-8.2.png](/assets/img/osint/boss-ranzen/Boss_Ranzen-8.2-1.png)
         
     - A post dated December 30, 2023, listed URLs such as https://rityyari.co.id/ghoul.php and mirror links to Zone-Xsec (https://zone-xsec.com/archive/attacker/boss-ranzen), HaxorID (https://haxor.id/archive/attacker/Boss-Ranzen), and Zone-H (https://www.zone-h.org/archive/notifier=Boss%20Ranzen).
         
@@ -153,7 +153,7 @@ The investigation into Boss Ranzen was conducted using a combination of open-sou
         
     - The profile showed no created content but included a username "@" and a profile picture hash.
         
-        ![Boss Ranzen-6.1.png](/assets/img/osint/boss-ranzen/Boss_Ranzen-6.1%201.png)
+        ![Boss Ranzen-6.1.png](/assets/img/osint/boss-ranzen/Boss_Ranzen-6.1-1.png)
         
 - **Details**:
     
@@ -185,7 +185,7 @@ The investigation into Boss Ranzen was conducted using a combination of open-sou
         
     - A July 6 post included instructions for using the "Mini Shell By Boss Ranzen," detailing file uploads via a virtual private server (VPS) and browser access, accompanied by terminal outputs and file names like xkit-shell.php.
         
-        ![FB-2.jpg](/assets/img/osint/boss-ranzen/FB-2%201.jpg)
+        ![FB-2.jpg](/assets/img/osint/boss-ranzen/FB-2-1.jpg)
         
 - **Technical Analysis**:
     - Examined the "Mini Shell By Boss Ranzen," a web-based file management tool used for exploiting compromised servers, as seen in posts and terminal screenshots.
