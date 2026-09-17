@@ -15,7 +15,6 @@
       <ul class="footer-social">
         {% assign s = site.social_links %}
         {% if s.github and s.github != "" %}<li><a href="https://github.com/{{ s.github }}" rel="me noopener" target="_blank">github</a></li>{% endif %}
-        {% if s.twitter and s.twitter != "" %}<li><a href="https://x.com/{{ s.twitter }}" rel="me noopener" target="_blank">x / twitter</a></li>{% endif %}
         {% if s.linkedin and s.linkedin != "" %}<li><a href="https://www.linkedin.com/in/{{ s.linkedin }}" rel="me noopener" target="_blank">linkedin</a></li>{% endif %}
         {% if s.hackthebox and s.hackthebox != "" %}<li><a href="{{ s.hackthebox }}" rel="me noopener" target="_blank">hackthebox</a></li>{% endif %}
         {% if s.tryhackme and s.tryhackme != "" %}<li><a href="{{ s.tryhackme }}" rel="me noopener" target="_blank">tryhackme</a></li>{% endif %}

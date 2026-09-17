@@ -21,7 +21,6 @@ author:
 # Social handles (footer + share links). Leave blank ("") to hide.
 social_links:
   github: POXOZ           # GitHub username
-  twitter: ""             # no X/Twitter — set to your handle to show the link
   linkedin: nithish-guru
   hackthebox: ""
   tryhackme: "https://tryhackme.com/p/NithisX"
