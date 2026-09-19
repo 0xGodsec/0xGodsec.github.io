@@ -4,5 +4,7 @@
   url: /blog/
 - title: tags
   url: /tags/
+- title: categories
+  url: /categories/
 - title: about
   url: /about/
