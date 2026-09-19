@@ -90,7 +90,7 @@ NXBBSEC appears to be a hacking group or collective with a significant presence 
 
 - The group uses a mix of offensive cyber tactics (DDoS, exploitation) and propaganda (misinformation correction, public shaming).
 
-![image](/assets/img/osint/nxbbsec/image-5.png)
+![image](/assets/img/osint/nxbbsec/image-5.jpg)
 
 - Their operations are well-documented on Telegram and X, suggesting a strategy to gain notoriety.
 - The focus on Thailand and Cambodia may be geopolitically motivated.

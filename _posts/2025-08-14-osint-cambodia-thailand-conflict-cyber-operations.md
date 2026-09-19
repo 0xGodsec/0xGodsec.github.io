@@ -409,7 +409,7 @@ NXBBSEC appears to be a hacking group or collective with a significant presence 
 
 - The group uses a mix of offensive cyber tactics (DDoS, exploitation) and propaganda (misinformation correction, public shaming).
 
-![image](/assets/img/osint/cambodia-thailand-conflict/image-20.png)
+![image](/assets/img/osint/cambodia-thailand-conflict/image-20.jpg)
 
 - Their operations are well-documented on Telegram and X, suggesting a strategy to gain notoriety.
 - The focus on Thailand and Cambodia may be geopolitically motivated.
@@ -463,7 +463,7 @@ KOLzSec, identified as a hacktivist group, appears to be actively engaged in cyb
 - **2023-10-30**: Initial channel activity recorded.
 - **2025-06-26**: Active messaging begins with a challenge ("If u wanna fight let's fight bro") and initial target (`https://check-host.net/check-report/287*********d4`).
 
-![image](/assets/img/osint/cambodia-thailand-conflict/image-26.png)
+![image](/assets/img/osint/cambodia-thailand-conflict/image-26.jpg)
 
 - **2025-06-27 to 2025-06-28**: Escalation with multiple targets, including banks and provincial organizations, accompanied by photo evidence.
 - **2025-08-08 to 2025-08-12**: Peak activity with claims of defacing 100+ sites, targeting high-profile entities like the Ministry of Defense, and DDoS attacks, with a member "Lei$" taking credit.

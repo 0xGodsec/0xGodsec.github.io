@@ -56,7 +56,7 @@ KOLzSec, identified as a hacktivist group, appears to be actively engaged in cyb
 - **2023-10-30**: Initial channel activity recorded.
 - **2025-06-26**: Active messaging begins with a challenge ("If u wanna fight let's fight bro") and initial target (https://check-host.net/check-report/287694cak3d4).
 
-![image](/assets/img/osint/kolzsec/image-5.png)
+![image](/assets/img/osint/kolzsec/image-5.jpg)
 
 - **2025-06-27 to 2025-06-28**: Escalation with multiple targets, including banks and provincial organizations, accompanied by photo evidence.
 - **2025-08-08 to 2025-08-12**: Peak activity with claims of defacing 100+ sites, targeting high-profile entities like the Ministry of Defense, and DDoS attacks, with a member "Lei$" taking credit.
