@@ -34,7 +34,7 @@ Open 192.168.111.25:80
 Open 192.168.111.25:8082
 Open 192.168.111.25:9999
 [~] Starting Script(s)
-[>] Running script "nmap -vvv -p {{port}} -{{ipversion}} {{ip}} -A" on ip 192.168.111.25
+{% raw %}[>] Running script "nmap -vvv -p {{port}} -{{ipversion}} {{ip}} -A"{% endraw %} on ip 192.168.111.25
 
 PORT     STATE SERVICE    REASON         VERSION
 22/tcp   open  ssh        syn-ack ttl 61 OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)

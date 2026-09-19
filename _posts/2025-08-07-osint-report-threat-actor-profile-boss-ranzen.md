@@ -16,7 +16,7 @@ Boss Ranzen is one of the world’s most prolific web defacers, with more than 1
 
 ### Total Victims: 29,076
 
-![Untitled design (4).png](/assets/img/osint/boss-ranzen/Untitled_design__4).png)
+![Untitled design (4).png](/assets/img/osint/boss-ranzen/Untitled_design__4_.png)
 
 ### 1. Identity Profile & Digital Footprint
 
@@ -102,7 +102,7 @@ The following table summarizes key defacement incidents:
 
 The investigation into Boss Ranzen was conducted using a combination of open-source intelligence (OSINT) techniques and targeted searches. Below is a detailed account of the steps taken to gather and analyze the information:
 
-![Untitled design (1).png](/assets/img/osint/boss-ranzen/Untitled_design__1).png)
+![Untitled design (1).png](/assets/img/osint/boss-ranzen/Untitled_design__1_.png)
 
 ### Step 1: Initial Discovery via Google Dorks
 
