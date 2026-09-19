@@ -2,39 +2,16 @@
 layout: page
 title: About
 permalink: /about/
-description: Who is Godsec — background, skills, certifications, and experience.
+description: Who is Godsec — background, certifications, and experience.
 ---
-
-<div class="about-grid">
-<div markdown="1">
 
 ## whoami
 
-I'm **Godsec** — an **Offensive Security Consultant** with 3+ years of experience in penetration testing,
-vulnerability exploitation, and red team operations across enterprise environments.
+I'm **Godsec**, a security consultant with 3+ years in penetration testing and red teaming.
+I started in a **SOC**, so I know what defenders watch for, and I use that on the offensive side.
 
-My day job is hands-on security testing of web applications, APIs, network infrastructure, and
-mobile platforms — using Burp Suite, Metasploit, Nessus, Nmap, OWASP ZAP, and Frida to find,
-exploit, and validate real weaknesses across thousands of servers and network devices. I came
-up through the **SOC** side first (triaging 100+ daily alerts across five SIEM platforms and
-mapping adversary behavior with MITRE ATT&CK), which shapes how I think about offense: I know
-what the defenders are watching, so I know where the blind spots are.
-
-I'm **CEH Practical** and **Microsoft SC-200** certified, with **OSCP in progress**. This site
-is where I document what I learn — practical, reproducible research with working commands and
-clear explanations of *why* an attack works, not just *that* it does.
-
-### what I write about
-
-Web app pentesting, Active Directory security, red teaming, bug bounty, threat intelligence,
-OSINT, malware analysis, network & API security, cloud security, and CTF / Hack The Box writeups.
-
-### get in touch
-
-- **LinkedIn:** [/in/nithish-guru](https://www.linkedin.com/in/nithish-guru)
-- **GitHub:** [@POXOZ](https://github.com/POXOZ)
-- **TryHackMe:** [NithisX](https://tryhackme.com/p/NithisX) — Top 2% globally
-- **Credly:** [verified certifications](https://www.credly.com/users/nithish-guru-kumar-gajula)
+This blog is where I write up what I learn: Active Directory attacks, CTF and lab walkthroughs,
+and OSINT reports, with commands you can actually run.
 
 ## experience
 
@@ -43,42 +20,11 @@ OSINT, malware analysis, network & API security, cloud security, and CTF / Hack 
   <li>
     <div><span class="xp-role">{{ job.role }}</span> · {{ job.org }}</div>
     <div class="xp-meta">{{ job.period }}</div>
-    <ul>
-    {% for p in job.points %}<li>{{ p }}</li>{% endfor %}
-    </ul>
   </li>
 {% endfor %}
 </ul>
 
-## achievements
-
-- 🥇 **1st Place** — StealthMole OSINT Capture The Flag (CTF) Competition, 2025
-- 🏆 **Employee of the Quarter** — 3 consecutive quarters (Q3–Q4 2024, Q1 2025)
-- 📈 **Top 2% globally** on TryHackMe (profile: NithisX)
-
-## education
-
-**B.Tech, Computer Science and Engineering** — Parul University, Vadodara · Aug 2019 – Apr 2023
-
-Relevant coursework: Cryptography & Network Security, Network Security Protocols, Information
-Security, Operating Systems, Distributed Systems, and Web Application Programming.
-
-</div>
-
-<aside markdown="1">
-
-### skills
-
-{% for g in site.data.skills %}
-<div class="skill-group">
-  <h3>{{ g.group }}</h3>
-  <ul class="tag-list">
-    {% for s in g.items %}<li class="tag">{{ s }}</li>{% endfor %}
-  </ul>
-</div>
-{% endfor %}
-
-### certifications
+## certifications
 
 <ul class="cert-list">
 {% for c in site.data.certifications %}
@@ -89,5 +35,19 @@ Security, Operating Systems, Distributed Systems, and Web Application Programmin
 {% endfor %}
 </ul>
 
-</aside>
-</div>
+## achievements
+
+- 1st Place, StealthMole OSINT CTF (2025)
+- Employee of the Quarter, 3 quarters in a row (Q3 2024 – Q1 2025)
+- Top 2% on TryHackMe
+
+## education
+
+B.Tech, Computer Science and Engineering, Parul University (2019 – 2023)
+
+## contact
+
+[LinkedIn](https://www.linkedin.com/in/nithish-guru) ·
+[GitHub](https://github.com/POXOZ) ·
+[TryHackMe](https://tryhackme.com/p/NithisX) ·
+[Credly](https://www.credly.com/users/nithish-guru-kumar-gajula)
