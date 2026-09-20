@@ -1,0 +1,70 @@
+/* ==================================================================
+   Refined layer — loaded after _theme.scss.
+   Keeps the terminal identity (mono headings, ~$ prompt, // and ##
+   prefixes, accent tags) on a calmer, roomier layout: IBM Plex Sans
+   body copy, solid hairlines instead of dashes, softer card shadows.
+   ================================================================== */
+
+body {
+  font-family: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.7;
+}
+h1, h2, h3, h4 { letter-spacing: -0.015em; font-weight: 600; }
+
+/* ---------------- header ---------------- */
+.site-header .wrap { height: 4.25rem; }
+.brand-prompt { text-shadow: 0 0 14px var(--accent-dim); }
+.nav-menu { gap: 1.4rem; font-size: .88rem; }
+.nav-menu a[aria-current="page"] { box-shadow: 0 2px 0 var(--accent); padding-bottom: 2px; }
+.icon-btn { border-radius: 8px; }
+
+/* ---------------- hero ---------------- */
+.hero { padding: 6rem 0 4.5rem; position: relative; overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(120% 90% at 30% 0%, #000 0%, transparent 70%);
+  mask-image: radial-gradient(120% 90% at 30% 0%, #000 0%, transparent 70%);
+  opacity: .7;
+}
+.hero .wrap { position: relative; }
+.hero-grid { gap: 4rem; }
+.hero h1 {
+  font-size: clamp(2.1rem, 4.4vw, 3.2rem); line-height: 1.1;
+  letter-spacing: -0.03em; margin: .6rem 0 1.25rem;
+}
+.hero h1 .accent { text-shadow: 0 0 28px var(--accent-dim); }
+.hero-kicker { font-size: .72rem; letter-spacing: .16em; }
+.hero-lede { font-size: 1.15rem; line-height: 1.65; }
+.btn { padding: .8rem 1.45rem; }
+.term { border-radius: 14px; box-shadow: 0 30px 70px -20px var(--shadow); }
+
+/* ---------------- sections / cards ---------------- */
+.section { padding: 3.75rem 0; }
+.section-head { border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 2rem; }
+.section-head h2 { font-size: 1.5rem; }
+.grid { gap: 1.5rem; }
+.post-card, .topic-card, .project-card { border-radius: 14px; padding: 1.7rem 1.75rem; }
+.post-card, .project-card { transition: border-color .2s, box-shadow .2s, transform .2s; }
+.post-card:hover, .project-card:hover {
+  border-color: var(--accent); box-shadow: 0 18px 40px -20px var(--shadow); transform: translateY(-3px);
+}
+.post-card-meta { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; }
+.post-card-cat { border: 0; padding: 0; color: var(--accent); }
+.post-card-title { font-size: 1.14rem; line-height: 1.4; margin: .75rem 0 .5rem; }
+.tag { font-size: .72rem; }
+
+/* ---------------- post ---------------- */
+.post-header { border-bottom: 1px solid var(--border); padding: 4rem 0 2rem; }
+.post-title { font-size: clamp(1.85rem, 3.6vw, 2.6rem); line-height: 1.16; letter-spacing: -0.025em; }
+.post-desc { font-size: 1.15rem; line-height: 1.6; }
+.difficulty { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; }
+.post-content h2 { border-bottom: 1px solid var(--border); font-size: 1.5rem; }
+.post-content h2::before { opacity: .55; }
+.post-content h3::before { opacity: .4; }
+.post-content hr { border-top-style: solid; }
+.post-content blockquote { border-left-width: 2px; }
+
+/* ---------------- footer ---------------- */
+.footer-links, .footer-social { font-size: .85rem; }
